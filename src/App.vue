@@ -1,28 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <hello-world></hello-world>
+    <team-composition></team-composition>
   </div>
 </template>
 
 <script>
+
 import HelloWorld from './components/HelloWorld.vue'
+import TeamComposition from './components/TeamComposition.vue'
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    'hello-world': HelloWorld,
+    'team-composition': TeamComposition
+
+  },
+  data: function(){
+    return{
+
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+body {
+  font: Arial; 
 }
+
 </style>
